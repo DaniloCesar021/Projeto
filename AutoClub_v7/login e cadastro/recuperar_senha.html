@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="recuperar_senha.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- biblioteca de máscara do javascript -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--  ---------------------------------------------------------------------------------------------------------------------------- -->
+    <title>Recuperar Senha</title>
+    <script src="../js/mascaras.js"></script>
+</head>
+
+<body>
+    <!-- COMEÇO DA NAVBAR -->
+    <nav id="navbar" class="navbar navbar-expand-lg bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img id="logo" src="../imagens/AutoClub_logo.png" class="img-fluid"
+                    style="max-width: 80px; height: auto;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="../home/home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#sobre_nos">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#contato">Contato</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="../login e cadastro/login.php">Entrar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="../login e cadastro/opcao_cadastro.html">Cadastre-se</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- FIM DA NAVBAR -->
+
+    <!-- Container para os Botões de Acessibilidade -->
+    <div class="accessibility-buttons">
+        <!-- Modo Claro / Escuro -->
+        <button id="mode-toggle" class="btn"><i class="fas fa-moon"></i></button>
+        <!-- Aumentar Fonte -->
+        <button id="increase-font" class="btn"><i class="fas fa-search-plus"></i></button>
+        <!-- Diminuir Fonte -->
+        <button id="decrease-font" class="btn"><i class="fas fa-search-minus"></i></button>
+    </div>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- Seção de Login -->
+        <section class="login-section">
+            <h2>Esqueceu a Senha?</h2>
+            <form id="loginForm" class="loginForm" action="../includes/recuperar_senha.php" method="post">
+
+                <div class="mb-3" id="nomeMaternoContainer">
+                    <label for="nomeMaterno" class="form-label">Nome Materno</label>
+                    <input type="text" class="form-control" name="nomeMaterno" id="nomeMaterno" placeholder="Digite o nome materno">
+                </div>
+
+                <div class="mb-3">
+                    <label for="cpf" class="form-label">CPF</label>
+                    <input type="text" class="form-control" id="cpf" name="cpf" placeholder="Digite seu CPF">
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu email">
+                </div>
+
+                <div class="acoes-login">
+                    <button type="submit" class="btn entrar" id="sendEmailButton">Recuperar</button>
+                </div>
+                
+            </form>
+        </section>
+    </div>
+
+    <!-- JS modo escuro -->
+    <script>
+        document.getElementById('mode-toggle').addEventListener('click', function () {
+            document.body.classList.toggle('dark-mode');
+            const currentMode = document.body.classList.contains('dark-mode') ? 'Escuro' : 'Claro';
+        });
+    </script>
+
+    <!-- JS Aumentar e diminuir tamanho da fonte -->
+    <script>
+        let fontSize = 16;
+
+        document.getElementById('increase-font').addEventListener('click', function () {
+            fontSize += 2;
+            document.body.style.fontSize = fontSize + 'px';
+        });
+
+        document.getElementById('decrease-font').addEventListener('click', function () {
+            fontSize -= 2;
+            document.body.style.fontSize = fontSize + 'px';
+        });
+
+    </script>
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

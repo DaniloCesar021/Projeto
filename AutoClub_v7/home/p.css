@@ -1,0 +1,130 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  /*    background: #f4f4f4; */
+  background-image: linear-gradient(to bottom, rgb(56, 53, 53), rgb(66, 64, 64), rgb(86, 83, 83), rgb(91, 89, 89), rgb(100, 98, 98), rgb(101, 98, 98), rgb(105, 102, 102));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.pricing-table {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.pricing-card {
+  background: #ffffffd6;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  padding: 20px;
+  margin: 8px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.287);
+}
+
+.pricing-card:hover {
+  transition: 0.3s;
+  transform: translate(-6px, -6px);
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.629);
+}
+
+.pricing-card h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffc107;
+  color: #000;
+  margin: -20px -20px 20px;
+  padding: 20px;
+  border-radius: 8px 8px 0 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.204);
+}
+
+.pricing-card.destaque h2 {
+  background-color: #ff9800;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.pricing-card ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #afadad;
+}
+
+.pricing-card ul li:last-child {
+  border-bottom: none;
+}
+
+.price {
+  margin: 20px 0;
+}
+
+.price span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.price p {
+  margin: 0;
+  color: #666;
+}
+
+.btn {
+  background: #ff5722;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #d43c0d;
+}
+
+img {
+  left: 35px;
+  top: 25px;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  position: absolute;
+}
+
+#p3 {
+  background: #e4670d;
+
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .pricing-table {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .pricing-card {
+    width: 100%;
+  }
+
+  img {
+    display: none;
+  }
+}
+
+@media (max-width:983px) {
+  img {
+    display: none;
+  }
+}
